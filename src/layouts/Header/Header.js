@@ -37,18 +37,18 @@ const Header = () =>{
                <>
                <div>
                   <Link className="main-nav-item" to="/User" >
-                     <i className="fa fa-user-circle icon-header"></i>
+                     <i className="fa fa-user-circle"></i>
                      {!userProfile.userName ? <>{userProfile.firstName}</> : <>{userProfile.userName}</>}
                   </Link>
                   <Link className="main-nav-item" to="/Login" onClick={handleSignOut}>
-                     <i className="fa fa-sign-out icon-header"></i>
+                     <i className="fa fa-sign-out"></i>
                      Sign Out
                   </Link>
                </div>
                </>
             ) : (
                <Link to="/Login" className="main-nav-item">
-                  <i className="fa fa-user-circle icon-header"></i>
+                  <i className="fa fa-user-circle"></i>
                   Sign In
                </Link>
             )}

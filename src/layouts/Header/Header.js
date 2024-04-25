@@ -9,7 +9,7 @@ import { fetchUserProfile } from '../../actions/user.action';
 
 export default Header
 
-function Header() { 
+const Header = () =>{ 
    const tokenLocalStorage = localStorage.getItem('token');
    const tokenSessionStorage = sessionStorage.getItem('token');
    const token = tokenLocalStorage || tokenSessionStorage;

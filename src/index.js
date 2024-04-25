@@ -5,9 +5,17 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './reducers';
+
+const store = configureStore({
+  reducer: rootReducer,
+  devTools: true,
+})
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Provider >
+  <Provider store={store} >
     <BrowserRouter>
       <App />
     </BrowserRouter>

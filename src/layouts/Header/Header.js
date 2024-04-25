@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
-import Logo from "../../assets/img/argentBankLogo.webp";
+import logoHeader from "../../assets/img/argentBankLogo.webp";
 import "./Header.css";
 import { logoutUser } from '../../actions/user.action';
 import { fetchUserProfile } from '../../actions/user.action';
@@ -30,7 +30,7 @@ const Header = () =>{
    return (
       <nav className="main-nav">
         <Link className="main-nav-logo" to="./">
-            <img className="main-nav-logo-image" src={Logo} alt="Argent Bank Logo" />
+            <img className="main-nav-logo-image" src={logoHeader} alt="Argent Bank Logo" />
             <h1 className="sr-only">Argent Bank</h1>
         </Link>
         {token ? (

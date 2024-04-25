@@ -4,7 +4,7 @@ import Footer from "./layouts/Footer/Footer";
 import Header from "./layouts/Header/Header";
 import Home from "./pages/Home/Home";
 
-function App() {
+const App = ()=> {
   return (
     <BrowserRouter>
       <Header />

@@ -7,7 +7,6 @@ import { logoutUser } from '../../actions/user.action';
 import { fetchUserProfile } from '../../actions/user.action';
 
 
-export default Header
 
 const Header = () =>{ 
    const tokenLocalStorage = localStorage.getItem('token');
@@ -56,3 +55,4 @@ const Header = () =>{
       </nav>
     );
   }
+export default Header;

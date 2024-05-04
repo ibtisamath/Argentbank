@@ -56,7 +56,7 @@ export const loginUser = (email, password, navigate, rememberMe) => {
       if (response.status === 401) {
         localStorage.removeItem("token");
         sessionStorage.removeItem("token");
-        navigate("/login");
+        navigate("/Login");
       }
     } catch (error) {
       dispatch(userLoginFailure("identifiants incorrects"));

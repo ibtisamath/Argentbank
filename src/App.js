@@ -4,7 +4,7 @@ import Footer from "./layouts/Footer/Footer";
 import Header from "./layouts/Header/Header";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import UserAccount from "./pages/UserAccount/UserAccount";
+import UserAccount from "./pages/UserAccount";
 
 
 const App = ()=> {

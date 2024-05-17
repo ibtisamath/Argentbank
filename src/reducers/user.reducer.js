@@ -10,7 +10,7 @@ const userReducer = (state = initialState, action) => {
     case USER_LOGIN_SUCCESS:
       return {
         ...state,
-        loginError: nu
+        loginError: null
       };
     case USER_LOGIN_FAILURE:
       return {

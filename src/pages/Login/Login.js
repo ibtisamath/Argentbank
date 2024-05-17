@@ -12,7 +12,7 @@ const Login = () => {
   const loginError = useSelector((state) => state.user.loginError);
   const navigate = useNavigate();
 
-  const handleSignIn = (e) => {
+  const handleSignIn = (e) => { 
     e.preventDefault();
     dispatch(loginUser(email, password, navigate, rememberMe));
   };

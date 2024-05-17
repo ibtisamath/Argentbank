@@ -6,18 +6,18 @@ export const LOGOUT_USER = "LOGOUT_USER";
 export const USER_PROFILE = "USER_PROFILE";
 export const UPDATE_USER_NAME = "UPDATE_USER_NAME";
 
-// Action pour gérer la connexion réussie de l'utilisateur
+// Action to manage the success user login
 export const userLoginSuccess = () => ({
   type: USER_LOGIN_SUCCESS,
 });
 
-// Action pour gérer l'échec de connexion de l'utilisateur
+// Action to manage the failure user login
 export const userLoginFailure = (error) => ({
   type: USER_LOGIN_FAILURE,
   payload: error,
 });
 
-// Action pour déconnecter l'utilisateur
+// Action to manage the user logout
 export const logoutUser = () => {
   localStorage.removeItem("token");
   sessionStorage.removeItem("token");
@@ -26,8 +26,7 @@ export const logoutUser = () => {
   };
 };
 
-//////// Action pour gérer la connexion de l'utilisateur
-
+// Action to manage the user connection
 export const loginUser = (email, password, navigate, rememberMe) => {
   return async (dispatch) => {
     try {
@@ -48,27 +47,16 @@ export const loginUser = (email, password, navigate, rememberMe) => {
         }
         navigate("/user-account");
         dispatch(userLoginSuccess());
-      } else {
-        localStorage.removeItem("token");
-        sessionStorage.removeItem("token");
-      }
-
-      if (response.status === 401) {
-        localStorage.removeItem("token");
-        sessionStorage.removeItem("token");
-        navigate("/Login");
-      }
+      } 
     } catch (error) {
       dispatch(userLoginFailure("identifiants incorrects"));
-      localStorage.removeItem("token");
-      sessionStorage.removeItem("token");
+      
     }
   };
 };
 
 
-///////// Action pour récupérer le profil de l'utilisateur depuis le serveur
-
+// Action to get the profil user
 export const fetchUserProfile = () => {
   return async (dispatch) => {
     let token = localStorage.getItem("token");
@@ -106,8 +94,7 @@ export const fetchUserProfile = () => {
 };
 
 
-///////// Action pour mettre à jour le nom d'utilisateur
-
+// Action to update the user name
 export const updateUserName = (userName) => {
   return async (dispatch) => {
     let token = localStorage.getItem("token");

@@ -13,7 +13,7 @@ const EditName = ({ setIsEditing }) => {
       dispatch(updateUserName(newUserName));
       setIsEditing(false);
       setNewUserName('');
-    }
+    } 
   };
 
   const handleCancel = () => {
